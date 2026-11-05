@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172536">
+  <meta name="description" content="Sistema de reservas y operación para restaurante">
+  <title>RestoApp · Sistema de reservas</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <a class="brand" href="#panel" aria-label="RestoApp, panel">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span><strong>RestoApp</strong><small>GESTIÓN DEL RESTAURANTE</small></span>
+      </a>
+      <nav class="nav-list" id="menuContainer" aria-label="Secciones"></nav>
+      <div class="sidebar-bottom" id="sidebarBottom" hidden>
+        <div class="signed-user"><span class="user-avatar" id="userAvatar">R</span><span><strong id="userNameDisplay">—</strong><small id="userRoleDisplay">—</small></span></div>
+        <button class="logout-button" id="logoutBtn" type="button"><span aria-hidden="true">↪</span> Cerrar sesión</button>
+      </div>
+      <div class="sidebar-note">Operación simple, servicio memorable.</div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <div><p class="eyebrow" id="topEyebrow">RESTOAPP</p><h1 id="viewTitle">Iniciar sesión</h1></div>
+        <div class="topbar-right"><span class="role-chip" id="roleBadge" hidden>—</span><span class="today-label" id="todayLabel"></span></div>
+      </header>
+      <section class="page-content" id="pageContent" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="icon-button modal-close" id="modalCloseBtn" type="button" aria-label="Cerrar">×</button>
+      <div id="modalBody"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
